@@ -1,6 +1,44 @@
 @import "tailwindcss";
 
+@theme {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --accent: #F2A0D4;               /* Pink Mutiara utama */
+  --color-accent-purple: #c4b5fd;  /* Ungu muda/purple-300 */
+}
+
 :root {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar bergaya light mode mengikuti tone pink */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #fbcfe8; /* Disesuaikan dengan tone pink lembut */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F2A0D4;
+}
+/* @import "tailwindcss"; */
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +61,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
