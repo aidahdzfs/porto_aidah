@@ -43,7 +43,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div variants={itemVariants} className="space-y-4 text-slate-600 text-sm md:text-sm leading-relaxed max-w-2xl">
-            <p>
+            <p className='text-justify'>
               a Fresh Graduate in Informatics Engineering from Hasanuddin University with a strong technical foundation in <span className='font-bold'>Fullstack Developer</span> Demonstrated practical expertise through an internship at Telkom Akses with a 
               portfolio that includes building an AI-powered skin disease detection app and conducting advanced market behavior analysis.</p>
           </motion.div>

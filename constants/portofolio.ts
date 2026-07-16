@@ -21,6 +21,7 @@ export const experiences = [
   }
 ];
 
+// DATA IKON DI SINI DIGUNAKAN SECARA GLOBAL
 export const skillCategories = [
   {
     category: "Frontend",
@@ -57,72 +58,68 @@ export const skillCategories = [
 export const projects = [
   {
     id: 1,
-    title: "AI-Based Vehicle Classification System",
-    category: "Thesis Project / Computer Vision",
-    description: "Sistem pendukung keputusan cerdas untuk gerbang tol hibrida yang mengintegrasikan visi komputer dan teknologi sensor guna meminimalkan kesalahan input data manual secara real-time.",
+    title: "PR-PO Document Management Platform",
+    category: "Web Developer Internship",
+    description: "Platform web untuk memfasilitasi upload dokumen PR-PO (Purchase Requisition-Purchase Order) guna merampingkan proses administrasi antara mitra (mitra) dan tim internal.",
     features: [
-      "Klasifikasi kendaraan secara instan menggunakan arsitektur YOLOv8.",
-      "Pipeline visualisasi data analitik sensor IoT ke dashboard berbasis web.",
-      "Stabilitas pengenalan objek tinggi di berbagai intensitas pencahayaan."
+      "Membangun alur upload dan verifikasi dokumen PR-PO berbasis web untuk menggantikan proses administrasi manual.",
+      "Mengoptimalkan alur pengajuan permintaan material serta sinkronisasi status pengajuan antara mitra dan tim internal.",
+      "Mengintegrasikan Firebase sebagai basis data real-time untuk pembaruan status pengajuan secara langsung."
     ],
     metrics: [
-      { label: "Model Accuracy", value: "94.8%" },
-      { label: "Processing Speed", value: "30 FPS" }
+      { label: "Duration", value: "Sep - Dec 2024" },
+      { label: "Role", value: "Web Developer Intern" }
     ],
-    techStack: ["Python", "Flask", "React.js", "OpenCV", "YOLOv8", "IoT"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://demo.com"
+    // SEKARANG MENGGUNAKAN OBJEK SEHINGGA DI PROJECTS TINGGAL MANGGIL KATA KUNCI YANG SAMA
+    techStack: [
+      { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" }
+    ],
+    githubUrl: "https://github.com"
   },
   {
     id: 2,
-    title: "Panic Buying Anomaly Detection Engine",
-    category: "Machine Learning Research",
-    description: "Mesin analisis prediktif untuk mendeteksi data transaksi tidak wajar dan perilaku panic buying pada platform e-commerce menggunakan pemrosesan bahasa alami.",
+    title: "AQI Dashboard - Real-Time Air Quality Monitor",
+    category: "Fullstack Web App / Concurrent Programming",
+    description: "Dashboard kualitas udara real-time untuk kota-kota di Indonesia, dibangun untuk mendemonstrasikan concurrent programming di Go melalui goroutines, channels, dan sync.WaitGroup guna mengambil data banyak kota secara paralel dari WAQI API.",
     features: [
-      "Ekstraksi sentimen kontekstual ulasan pelanggan e-commerce dengan model IndoBERT.",
-      "Isolasi titik data transaksi anomali menggunakan algoritma Isolation Forest.",
-      "Validasi tren fluktuasi data retail historis melalui integrasi Google Trends API."
+      "Mengambil data kualitas udara dari 85+ stasiun pemantauan di seluruh Indonesia secara konkuren menggunakan goroutines, channels, dan sync.WaitGroup di backend Go.",
+      "Menyediakan peta interaktif (Leaflet) dengan marker AQI berwarna serta breakdown polutan per kota (PM2.5, PM10, O3, NO2, SO2, CO).",
+      "Menerapkan partial failure handling sehingga kegagalan fetch satu kota tidak mempengaruhi hasil kota lain, lengkap dengan atribusi sumber data sesuai ketentuan WAQI."
     ],
     metrics: [
-      { label: "F1-Score Model", value: "0.89" },
-      { label: "Dataset Evaluated", value: "10k+ Rows" }
+      { label: "Cities Covered", value: "85+ Stations" },
+      { label: "Concurrency Model", value: "Goroutines + Channels" }
     ],
-    techStack: ["Python", "IndoBERT", "Isolation Forest", "Google Trends", "Scikit-Learn"],
-    githubUrl: "https://github.com"
+    // DIBUAT STRUKTUR OBJEK YANG SAMA
+    techStack: [
+      { name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
+      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
+    ],
+    githubUrl: "https://github.com/aidahdzfs/air-quality-project",
+    liveUrl: "https://air-quality-project.vercel.app"
+  }
+];
+
+// Tambahkan di bagian paling bawah file constants/portofolio.js
+export const certificates = [
+  {
+    id: 1,
+    title: "Cloud Computing Certified Graduate",
+    issuer: "Bangkit Academy led by Google, GoTo, Traveloka",
+    issuedDate: "2024",
+    credentialUrl: "https://bangkit.academy",
+    // Taruh berkas gambar/screenshot sertifikat Anda di folder public dengan nama cert1.jpg
+    image: "/cert1.jpg" 
   },
   {
-    id: 3,
-    title: "Corporate Financial Management System",
-    category: "Fullstack Web App",
-    description: "Sistem pelaporan dan tata kelola arus keuangan internal berbasis web digital untuk merampingkan alur pengajuan reimbursement serta manajemen kas bon.",
-    features: [
-      "Implementasi arsitektur multi-level approval untuk keamanan otorisasi data.",
-      "Penyimpanan aman berkas bukti transaksi menggunakan Firebase Cloud Storage.",
-      "Mesin rendering instan laporan keuangan periodik ke dalam format berkas PDF."
-    ],
-    metrics: [
-      { label: "Processing Time", value: "-40% Faster" },
-      { label: "Active User Base", value: "150+ Staff" }
-    ],
-    techStack: ["React.js", "Tailwind CSS", "Firebase", "Express.js", "PDF Engine"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://demo.com"
-  },
-  {
-    id: 4,
-    title: "SkinScan - Smart Health Platform",
-    category: "Bangkit Academy Capstone",
-    description: "Inovasi aplikasi seluler deteksi dini kesehatan kulit yang ditenagai oleh model deep learning dan didukung infrastruktur cloud backend yang andal.",
-    features: [
-      "Deployment model klasifikasi gambar medis via REST API berlatensi rendah.",
-      "Arsitektur serverless mikro yang efisien di atas ekosistem Google Cloud Platform.",
-      "Manajemen sesi dan proteksi data privasi pengguna menggunakan enkripsi token."
-    ],
-    metrics: [
-      { label: "API Response Latency", value: "< 200ms" },
-      { label: "Model Core Size", value: "45 MB" }
-    ],
-    techStack: ["Google Cloud Platform", "Python", "TensorFlow", "Docker", "Flask", "Kotlin"],
-    githubUrl: "https://github.com"
+    id: 2,
+    title: "Google Cloud Certified - Associate Cloud Engineer",
+    issuer: "Google Cloud",
+    issuedDate: "2024",
+    credentialUrl: "https://www.credly.com",
+    image: "/cert2.jpg"
   }
 ];
