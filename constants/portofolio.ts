@@ -1,3 +1,27 @@
+// constants/portofolio.js
+
+// KAMUS TUNGGAL — satu-satunya tempat menyimpan URL icon
+const ICONS: Record<string, string> = {
+  "React.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  "Laravel": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
+  "Python": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  "Firebase": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg",
+  "MySQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  "Go": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+  "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  "VS Code": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  "Postman": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/postman.svg",
+  "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+};
+
+// Helper: ubah nama string -> object {name, icon} sesuai bentuk yang dipakai komponen
+const tech = (name: string) => ({ name, icon: ICONS[name] });
+
 export const experiences = [
   {
     period: "Sep 2024 - Des 2024",
@@ -25,34 +49,16 @@ export const experiences = [
 export const skillCategories = [
   {
     category: "Frontend",
-    skills: [
-      { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
-      { name: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" }
-    ]
+    skills: ["React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Laravel"].map(tech),
   },
   {
     category: "Backend & Cloud Infrastructure",
-    skills: [
-      { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-      { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" },
-      { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-      { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-      { name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
-      { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" }
-    ]
+    skills: ["Python", "Firebase", "MySQL", "PostgreSQL", "Go", "Docker"].map(tech),
   },
   {
     category: "Dev Tools",
-    skills: [
-      { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-      { name: "Postman", icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/postman.svg" },
-      { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" }
-    ]
-  }
+    skills: ["VS Code", "Postman", "Git"].map(tech),
+  },
 ];
 
 export const projects = [
@@ -71,10 +77,7 @@ export const projects = [
       { label: "Role", value: "Web Developer Intern" }
     ],
     // SEKARANG MENGGUNAKAN OBJEK SEHINGGA DI PROJECTS TINGGAL MANGGIL KATA KUNCI YANG SAMA
-    techStack: [
-      { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" }
-    ],
+    techStack: ["React.js", "Firebase"].map(tech),
     githubUrl: "https://github.com"
   },
   {
@@ -92,12 +95,7 @@ export const projects = [
       { label: "Concurrency Model", value: "Goroutines + Channels" }
     ],
     // DIBUAT STRUKTUR OBJEK YANG SAMA
-    techStack: [
-      { name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
-      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-      { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" }
-    ],
+    techStack: ["Go", "Next.js", "TypeScript", "Tailwind CSS"].map(tech),
     githubUrl: "https://github.com/aidahdzfs/air-quality-project",
     liveUrl: "https://air-quality-project.vercel.app"
   }
