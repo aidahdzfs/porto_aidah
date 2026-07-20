@@ -17,6 +17,7 @@ const ICONS: Record<string, string> = {
   "VS Code": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   "Postman": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/postman.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  "Leaflet": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leaflet/leaflet-original.svg",
 };
 
 // Helper: ubah nama string -> object {name, icon} sesuai bentuk yang dipakai komponen
@@ -68,34 +69,35 @@ export const projects = [
     category: "Web Developer Internship",
     description: "Platform web untuk memfasilitasi upload dokumen PR-PO (Purchase Requisition-Purchase Order) guna merampingkan proses administrasi antara mitra (mitra) dan tim internal.",
     features: [
-      "Membangun alur upload dan verifikasi dokumen PR-PO berbasis web untuk menggantikan proses administrasi manual.",
-      "Mengoptimalkan alur pengajuan permintaan material serta sinkronisasi status pengajuan antara mitra dan tim internal.",
-      "Mengintegrasikan Firebase sebagai basis data real-time untuk pembaruan status pengajuan secara langsung."
+      "Developed a web-based platform to facilitate the uploading of PR-PO (Purchase Requisition) documents, streamlining the administration process.",
+      "Optimized material request submissions and status updates between partners (mitra) and the internal team.",
+      "Integrated Firebase as a real-time database for live submission status updates."
     ],
     metrics: [
       { label: "Duration", value: "Sep - Dec 2024" },
       { label: "Role", value: "Web Developer Intern" }
     ],
     // SEKARANG MENGGUNAKAN OBJEK SEHINGGA DI PROJECTS TINGGAL MANGGIL KATA KUNCI YANG SAMA
-    techStack: ["React.js", "Firebase"].map(tech),
-    githubUrl: "https://github.com"
+    techStack: ["Next.js","React.js", "Firebase", "Tailwind CSS"].map(tech),
+    githubUrl: "https://github.com/aidahdzfs/reminder_pr_po"
   },
   {
     id: 2,
     title: "AQI Dashboard - Real-Time Air Quality Monitor",
     category: "Fullstack Web App / Concurrent Programming",
-    description: "Dashboard kualitas udara real-time untuk kota-kota di Indonesia, dibangun untuk mendemonstrasikan concurrent programming di Go melalui goroutines, channels, dan sync.WaitGroup guna mengambil data banyak kota secara paralel dari WAQI API.",
+    description: "A real-time air quality dashboard for Indonesian cities, built to demonstrate concurrent programming in Go using goroutines, channels, and sync.WaitGroup to fetch data from multiple locations in parallel via the WAQI API.",
     features: [
-      "Mengambil data kualitas udara dari 85+ stasiun pemantauan di seluruh Indonesia secara konkuren menggunakan goroutines, channels, dan sync.WaitGroup di backend Go.",
-      "Menyediakan peta interaktif (Leaflet) dengan marker AQI berwarna serta breakdown polutan per kota (PM2.5, PM10, O3, NO2, SO2, CO).",
-      "Menerapkan partial failure handling sehingga kegagalan fetch satu kota tidak mempengaruhi hasil kota lain, lengkap dengan atribusi sumber data sesuai ketentuan WAQI."
-    ],
+    "Interactive Leaflet map with AQI color-coded markers and full pollutant breakdown.",
+    "Concurrent data pipeline fetching multiple stations using Go goroutines and buffered channels.",
+    "Robust partial failure handling using polymorphic JSON decoding and independent timeouts.",
+    "Efficient in-memory caching utilizing sync.RWMutex with graceful degradation fallback."
+  ],
     metrics: [
       { label: "Cities Covered", value: "85+ Stations" },
       { label: "Concurrency Model", value: "Goroutines + Channels" }
     ],
     // DIBUAT STRUKTUR OBJEK YANG SAMA
-    techStack: ["Go", "Next.js", "TypeScript", "Tailwind CSS"].map(tech),
+    techStack: ["Go", "Next.js", "TypeScript", "Tailwind CSS", "Leaflet", ].map(tech),
     githubUrl: "https://github.com/aidahdzfs/air-quality-project",
     liveUrl: "https://air-quality-project.vercel.app"
   }
@@ -105,19 +107,48 @@ export const projects = [
 export const certificates = [
   {
     id: 1,
-    title: "Cloud Computing Certified Graduate",
+    title: "Mobile Development Certified Graduate",
     issuer: "Bangkit Academy led by Google, GoTo, Traveloka",
     issuedDate: "2024",
-    credentialUrl: "https://bangkit.academy",
+    credentialUrl: null,
+    pdfUrl: "/bangkit_sertif.pdf",
     // Taruh berkas gambar/screenshot sertifikat Anda di folder public dengan nama cert1.jpg
     image: "/cert1.jpg" 
   },
   {
     id: 2,
-    title: "Google Cloud Certified - Associate Cloud Engineer",
-    issuer: "Google Cloud",
-    issuedDate: "2024",
-    credentialUrl: "https://www.credly.com",
+    title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+    issuer: "Dicoding Indonesia",
+    issuedDate: "2027",
+    credentialUrl: "https://www.dicoding.com/certificates/MRZM8V0M0ZYQ",
+    pdfUrl: null,
     image: "/cert2.jpg"
-  }
+  },
+  {
+    id: 3,
+    title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
+    issuer: "Dicoding Indonesia",
+    issuedDate: "2027",
+    credentialUrl: "https://www.dicoding.com/certificates/N9ZOOL446ZG5",
+    pdfUrl: null,
+    image: "/cert3.jpg"
+  },
+  {
+    id: 4,
+    title: "Belajar Dasar AI",
+    issuer: "Dicoding Indonesia",
+    issuedDate: "2027",
+    credentialUrl: "https://www.dicoding.com/certificates/NVP7QGDNWZR0",
+    pdfUrl: null,
+    image: "/cert4.jpg"
+  },
+  {
+    id: 5,
+    title: "Belajar Pengembangan Aplikasi Android Intermediate",
+    issuer: "Dicoding Indonesia",
+    issuedDate: "2027",
+    credentialUrl: "https://www.dicoding.com/certificates/07Z604V3RZQR",
+    pdfUrl: null,
+    image: "/cert4.jpg"
+  },
 ];

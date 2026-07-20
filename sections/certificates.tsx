@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { certificates } from '../constants/portofolio';
-import { Award, ExternalLink } from 'lucide-react';
+import { Award, ExternalLink, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -79,16 +79,29 @@ export default function Certificates() {
 
                 {/* Bagian Bawah: Tanggal & Tautan */}
                 <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-[11px] font-mono">
-                  <span className="text-slate-400">Issued: {cert.issuedDate}</span>
-                  <a 
-                    href={cert.credentialUrl} 
-                    target="_blank" 
-                    rel="noreferrer" 
-                    className="text-[#DE71B6] hover:text-[#c4539c] font-bold flex items-center gap-0.5 transition-colors"
-                  >
-                    [Credential] <ExternalLink size={10} />
-                  </a>
-                </div>
+  <span className="text-slate-400">Issued: {cert.issuedDate}</span>
+
+  {cert.credentialUrl && (
+    <a 
+      href={cert.credentialUrl} 
+      target="_blank" 
+      rel="noreferrer" 
+      className="text-[#DE71B6] hover:text-[#c4539c] font-bold flex items-center gap-0.5 transition-colors"
+    >
+      [Credential] <ExternalLink size={10} />
+    </a>
+  )}
+
+  {cert.pdfUrl && (
+    <a 
+      href={cert.pdfUrl} 
+      download
+      className="text-[#DE71B6] hover:text-[#c4539c] font-bold flex items-center gap-0.5 transition-colors"
+    >
+      [Download PDF] <Download size={10} />
+    </a>
+  )}
+</div>
               </div>
 
             </motion.div>

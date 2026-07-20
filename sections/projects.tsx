@@ -52,7 +52,7 @@ export default function Projects() {
             >
               
               {/* KOLOM 1: Area Ilustrasi / Gambar Proyek Full Tinggi */}
-              <div className="md:w-[30%] bg-gradient-to-tr from-[#F2A0D4]/20 via-purple-100/30 to-slate-50 relative min-h-[220px] md:min-h-auto flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-100 overflow-hidden">
+              <div className="md:w-[30%] bg-linear-to-tr from-[#F2A0D4]/20 via-purple-100/30 to-slate-50 relative min-h-[220px] md:min-h-auto flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-100 overflow-hidden">
                 {/* Efek pendaran lingkaran di dalam pembungkus gambar */}
                 <div className="absolute w-40 h-40 rounded-full bg-gradient-to-tr from-[#F2A0D4]/30 to-purple-300/30 blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
                 
