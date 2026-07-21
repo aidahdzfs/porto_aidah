@@ -17,7 +17,7 @@ const ICONS: Record<string, string> = {
   "VS Code": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   "Postman": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/postman.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  "Leaflet": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/leaflet/leaflet-original.svg",
+  "Leaflet": "https://cdn.simpleicons.org/leaflet",
 };
 
 // Helper: ubah nama string -> object {name, icon} sesuai bentuk yang dipakai komponen
