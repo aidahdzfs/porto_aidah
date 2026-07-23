@@ -89,8 +89,7 @@ export const projects = [
     features: [
     "Interactive Leaflet map with AQI color-coded markers and full pollutant breakdown.",
     "Concurrent data pipeline fetching multiple stations using Go goroutines and buffered channels.",
-    "Robust partial failure handling using polymorphic JSON decoding and independent timeouts.",
-    "Efficient in-memory caching utilizing sync.RWMutex with graceful degradation fallback."
+    "Robust partial failure handling using polymorphic JSON decoding and independent timeouts."
   ],
     metrics: [
       { label: "Cities Covered", value: "85+ Stations" },
