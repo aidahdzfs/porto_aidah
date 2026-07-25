@@ -1,6 +1,3 @@
-// constants/portofolio.js
-
-// KAMUS TUNGGAL — satu-satunya tempat menyimpan URL icon
 const ICONS: Record<string, string> = {
   "React.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
@@ -81,10 +78,30 @@ export const projects = [
     techStack: ["Next.js","React.js", "Firebase", "Tailwind CSS"].map(tech),
     githubUrl: "https://github.com/aidahdzfs/reminder_pr_po"
   },
+
   {
     id: 2,
+    title: "Travel Planner - Realistic Itinerary Builder",
+    category: "Fullstack Web App",
+    description: "A full-stack trip planner that goes beyond simple itinerary CRUD — it validates whether a daily schedule is physically realistic by combining route optimization algorithms (nearest-neighbor + 2-opt) with real travel-time data from an external routing engine.",
+    features: [
+      "Two-tier route optimization: instant free Haversine estimation for exploration, verified against OpenRouteService Matrix API for accurate results.",
+      "Daily schedule validator that detects time conflicts, workload overload, and unreachable routes by cross-referencing travel time against each activity's start time and duration.",
+      "Interactive Leaflet map with region-bounded location search (Nominatim), drag-and-drop activity reordering, and one-click wishlist-to-schedule promotion."
+    ],
+    metrics: [
+      { label: "Optimization Algorithm", value: "Nearest-Neighbor + 2-Opt" },
+      { label: "Schedule Validation", value: "3 Constraint Checks (Time, Workload, Route)" }
+    ],
+    // DIBUAT STRUKTUR OBJEK YANG SAMA
+    techStack: ["Go", "PostgreSQL", "Next.js", "TypeScript", "Tailwind CSS", "Leaflet", "Docker"].map(tech),
+    githubUrl: "https://github.com/aidahdzfs/travel_planner_project",
+    liveUrl: "https://travel-planner-project-lake.vercel.app"
+  },
+  {
+    id: 3,
     title: "AQI Dashboard - Real-Time Air Quality Monitor",
-    category: "Fullstack Web App / Concurrent Programming",
+    category: "Fullstack Web App",
     description: "A real-time air quality dashboard for Indonesian cities, built to demonstrate concurrent programming in Go using goroutines, channels, and sync.WaitGroup to fetch data from multiple locations in parallel via the WAQI API.",
     features: [
     "Interactive Leaflet map with AQI color-coded markers and full pollutant breakdown.",

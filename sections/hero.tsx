@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section className="max-w-5xl mx-auto px-6 pt-16 pb-20 md:pt-24 md:pb-24 relative">
       {/* Efek Pendaran Latar Belakang Kristal Mutiara (Pink `#F2A0D4` & Ungu Muda) */}
-      <div className="absolute top-10 right-10 md:right-32 w-80 h-80 rounded-full bg-gradient-to-tr from-[#F2A0D4]/30 to-purple-300/40 blur-3xl -z-10 pointer-events-none"></div>
+      <div className="absolute top-10 right-10 md:right-32 w-80 h-80 rounded-full bg-linear-to-tr from-[#F2A0D4]/30 to-purple-300/40 blur-3xl -z-10 pointer-events-none"></div>
 
       <motion.div 
         variants={containerVariants}
@@ -44,14 +44,18 @@ export default function Hero() {
 
           <motion.div variants={itemVariants} className="space-y-4 text-slate-600 text-sm md:text-sm leading-relaxed max-w-2xl">
             <p className='text-justify'>
-              a Fresh Graduate in Informatics Engineering from Hasanuddin University with a strong technical foundation in <span className='font-bold'>Fullstack Developer</span> Demonstrated practical expertise through an internship at Telkom Akses with a 
-              portfolio that includes building an AI-powered skin disease detection app and conducting advanced market behavior analysis.</p>
+              Informatics Engineering graduate from Hasanuddin University specializing in <span className='font-bold'>fullstack web 
+              development</span>. Proficient in building end-to-end web applications using React.js, Next.js, and TypeScript on the 
+              frontend, paired with Go on the backend and relational databases such as MySQL and PostgreSQL. Proven practical 
+              experience through an internship at Telkom Akses and several self-directed fullstack web projects, 
+              complemented by a background in Android and machine learning from Bangkit Academy. Actively seeking 
+              fullstack web developer roles.</p>
           </motion.div>
           
           {/* Tombol Aksi & Dokumen Pendukung */}
           <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 pt-2">
-            <a href='/cv_aidah.pdf' download="CV_Aidah_Dzulfadilah.pdf" >
-            <button className="px-5 py-2.5 bg-gradient-to-tr from-[#F2A0D4] to-purple-300 text-white text-xs font-bold rounded-lg hover:bg-[#eba7d2] hover:shadow-lg hover:shadow-[#F2A0D4]/30 transition-all flex items-center gap-2 cursor-pointer">
+            <a href='/CV_Aidah Dzulfadilah Suwardi.pdf' download="CV_Aidah Dzulfadilah Suwardi.pdf" >
+            <button className="px-5 py-2.5 bg-linear-to-tr from-[#F2A0D4] to-purple-300 text-white text-xs font-bold rounded-lg hover:bg-[#eba7d2] hover:shadow-lg hover:shadow-[#F2A0D4]/30 transition-all flex items-center gap-2 cursor-pointer">
               <FileText size={17} /> Curriculum Vitae
             </button>
             </a>
@@ -79,7 +83,7 @@ export default function Hero() {
           
           {/* Komponen Foto Profil Bulat di Atas Card (Meniru Pola Contoh Visual Gambar Kedua) */}
           <div className="flex justify-center">
-            <div className="relative p-1.5 bg-gradient-to-tr from-[#F2A0D4] to-purple-300 rounded-full shadow-md shadow-purple-100/50">
+            <div className="relative p-1.5 bg-linear-to-tr from-[#F2A0D4] to-purple-300 rounded-full shadow-md shadow-purple-100/50">
               <div className="w-40 h-40 md:w-50 md:h-50 rounded-full overflow-hidden relative bg-slate-100 border border-white">
                 <Image 
                   src="/profile_aidah.png" 
