@@ -96,7 +96,7 @@ export const projects = [
     // DIBUAT STRUKTUR OBJEK YANG SAMA
     techStack: ["Go", "PostgreSQL", "Next.js", "TypeScript", "Tailwind CSS", "Leaflet", "Docker"].map(tech),
     githubUrl: "https://github.com/aidahdzfs/travel_planner_project",
-    liveUrl: "https://travel-planner-project-lake.vercel.app"
+    liveUrl: "https://atour-travel-planner.vercel.app"
   },
   {
     id: 3,
