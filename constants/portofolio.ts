@@ -15,6 +15,12 @@ const ICONS: Record<string, string> = {
   "Postman": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/postman.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   "Leaflet": "https://cdn.simpleicons.org/leaflet",
+  "Supabase": "https://cdn.simpleicons.org/supabase",
+  "Vercel": "https://cdn.simpleicons.org/vercel/000000",
+  "TensorFlow": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+  "Android": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+  "PHP": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  "Kotlin": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
 };
 
 // Helper: ubah nama string -> object {name, icon} sesuai bentuk yang dipakai komponen
@@ -166,5 +172,24 @@ export const certificates = [
     credentialUrl: "https://www.dicoding.com/certificates/07Z604V3RZQR",
     pdfUrl: null,
     image: "/cert4.jpg"
+  },
+];
+
+export const otherProjects = [
+  {
+    id: 1,
+    title: "SkinScan",
+    description: "Developed a mobile application that utilizes Machine Learning to identify various skin diseases from images. This project was part of my focus on integrating AI with Mobile Development to provide accessible healthcare solutions.",
+    techStack: ["Kotlin", "Android", "Firebase", "TensorFlow"].map(tech),
+    githubUrl: null,
+    liveUrl: null
+  },
+  {
+    id: 2,
+    title: "Product Management System",
+    description: "Built a product management web application implementing full CRUD (Create, Read, Update, Delete) functionality using the MVC architecture. ",
+    techStack: ["Laravel", "Tailwind CSS", "PHP"].map(tech),
+    githubUrl: "https://github.com/aidahdzfs/technical-test-aksesmu-aidah",
+    liveUrl: null
   },
 ];

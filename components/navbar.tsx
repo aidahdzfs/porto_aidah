@@ -8,9 +8,9 @@ export default function Navbar() {
           Aidah<span className="text-[#A33397]">dz</span>
         </a>
         <div className="flex items-center gap-5 text-xs font-medium text-slate-500">
+          <a href="#hero" className="hover:text-[#A33397] transition-colors">About</a>
           <a href="#projects" className="hover:text-[#A33397] transition-colors">Projects</a>
           <a href="#stack" className="hover:text-[#A33397] transition-colors">Stack</a>
-          <a href="#contact" className="hover:text-[#A33397] transition-colors">Experience</a>
           <a href="#certificates" className="hover:text-[#A33397] transition-colors">Certificates</a>
           <a href="#contact" className="px-3 py-1.5 bg-slate-900 text-white rounded-md hover:bg-slate-800 transition-all text-[11px]">
             Contact Me
