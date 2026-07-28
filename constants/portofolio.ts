@@ -99,7 +99,6 @@ export const projects = [
       { label: "Optimization Algorithm", value: "Nearest-Neighbor + 2-Opt" },
       { label: "Schedule Validation", value: "3 Constraint Checks (Time, Workload, Route)" }
     ],
-    // DIBUAT STRUKTUR OBJEK YANG SAMA
     techStack: ["Go", "PostgreSQL", "Next.js", "TypeScript", "Tailwind CSS", "Leaflet", "Docker"].map(tech),
     githubUrl: "https://github.com/aidahdzfs/travel_planner_project",
     liveUrl: "https://atour-travel-planner.vercel.app"
@@ -134,7 +133,6 @@ export const certificates = [
     issuedDate: "2024",
     credentialUrl: null,
     pdfUrl: "/bangkit_sertif.pdf",
-    // Taruh berkas gambar/screenshot sertifikat Anda di folder public dengan nama cert1.jpg
     image: "/cert1.jpg" 
   },
   {
