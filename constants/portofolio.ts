@@ -23,6 +23,10 @@ const ICONS: Record<string, string> = {
   "Kotlin": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
   "JWT": "https://cdn.simpleicons.org/jsonwebtokens",
   "OpenStreetMap": "https://cdn.simpleicons.org/openstreetmap",
+  "Vue.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+  "Inertia.js": "https://cdn.simpleicons.org/inertia",
+  "Chart.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chartjs/chartjs-original.svg",
+  "Vite": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
 };
 
 // Helper: ubah nama string -> object {name, icon} sesuai bentuk yang dipakai komponen
@@ -55,11 +59,11 @@ const tech = (name: string) => ({ name, icon: ICONS[name] });
 export const skillCategories = [
   {
     category: "Frontend",
-    skills: ["React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"].map(tech),
+    skills: ["React.js", "Next.js", "Vue.js", "TypeScript", "JavaScript", "Tailwind CSS"].map(tech),
   },
   {
     category: "Backend & Databases",
-    skills: ["Go", "PHP", "Laravel", "Python", "MySQL", "PostgreSQL", "Firebase", "JWT"].map(tech),
+    skills: ["Go", "PHP", "Laravel", "Python", "MySQL", "PostgreSQL", "Firebase", "JWT", "Inertia.js"].map(tech),
   },
   {
     category: "Mobile & Machine Learning",
@@ -67,7 +71,7 @@ export const skillCategories = [
   },
   {
     category: "DevOps & Tools",
-    skills: ["Docker", "Git", "Postman", "VS Code", "Vercel"].map(tech),
+    skills: ["Docker", "Git", "Postman", "VS Code", "Vercel", "Vite", "Chart.js"].map(tech),
   },
 ];
 
@@ -132,7 +136,29 @@ export const projects = [
     techStack: ["Go", "Next.js", "TypeScript", "Tailwind CSS", "Leaflet", "Vercel"].map(tech),
     githubUrl: "https://github.com/aidahdzfs/air-quality-project",
     liveUrl: "https://air-quality-project.vercel.app"
-  }
+  },
+
+  {
+    id: 4,
+    title: "Truck Finance Tracker - Fleet Expense & Revenue Dashboard",
+    category: "Fullstack Web App",
+    description: "A financial tracking system for trucking company operations that goes beyond basic expense logging — it aggregates income and expenses per vehicle into automated monthly profit/loss reports, with a schema architected from day one to scale into a multi-tenant system.",
+    features: [
+      "Designed a Service Layer (FinancialReportService) to isolate financial reporting logic from Controllers, enabling reuse across dashboard, reports, and future export features without duplication.",
+      "Built a monthly summary engine that aggregates income/expense by category, truck, and date range using Eloquent query scoping and clone-based query isolation.",
+      "Architected a database schema with company_id embedded across all transactional tables, preparing the system for multi-company support without future structural migration.",
+      "Optimized data loading with Eloquent eager loading to eliminate N+1 query issues on transaction listing pages, and applied intentional denormalization (duplicated type field) to speed up report aggregation queries."
+    ],
+    metrics: [
+      { label: "Architecture Pattern", value: "Service Layer + Dependency Injection" },
+      { label: "Report Aggregation", value: "Monthly Income/Expense/Profit by Category & Vehicle" }
+    ],
+    techStack: [
+      "Laravel", "PHP", "Vue.js", "Inertia.js", 
+      "Tailwind CSS", "MySQL", "Chart.js"
+    ].map(tech),
+    githubUrl: "https://github.com/aidahdzfs/truck-finance-tracker"
+  },
 ];
 
 // Tambahkan di bagian paling bawah file constants/portofolio.js
