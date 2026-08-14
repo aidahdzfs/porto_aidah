@@ -122,11 +122,10 @@ export const projects = [
     id: 3,
     title: "Truck Finance Tracker - Fleet Expense & Revenue Dashboard",
     category: "Fullstack Web App",
-    description: "A financial tracking system for trucking company operations that goes beyond basic expense logging — it aggregates income and expenses per vehicle into automated monthly profit/loss reports, with a schema architected from day one to scale into a multi-tenant system.",
+    description: "A financial tracking system for trucking company operations that goes beyond basic expense logging it aggregates income and expenses per vehicle into automated monthly profit/loss reports.",
     features: [
       "Designed a Service Layer (FinancialReportService) to isolate financial reporting logic from Controllers, enabling reuse across dashboard, reports, and future export features without duplication.",
       "Built a monthly summary engine that aggregates income/expense by category, truck, and date range using Eloquent query scoping and clone-based query isolation.",
-      "Architected a database schema with company_id embedded across all transactional tables, preparing the system for multi-company support without future structural migration.",
       "Optimized data loading with Eloquent eager loading to eliminate N+1 query issues on transaction listing pages, and applied intentional denormalization (duplicated type field) to speed up report aggregation queries."
     ],
     metrics: [
