@@ -117,29 +117,9 @@ export const projects = [
     githubUrl: "https://github.com/aidahdzfs/travel_planner_project",
     liveUrl: "https://atour-travel-planner.vercel.app"
   },
-  {
-    id: 3,
-    title: "AQI Dashboard - Real-Time Air Quality Monitor",
-    category: "Fullstack Web App",
-    description: "A real-time air quality dashboard for Indonesian cities, built to demonstrate concurrent programming in Go using goroutines, channels, and sync.WaitGroup to fetch data from multiple locations in parallel via the WAQI API.",
-    features: [
-    "Interactive Leaflet map with AQI color-coded markers and full pollutant breakdown.",
-    "Concurrent data pipeline fetching multiple stations using Go goroutines and buffered channels.",
-    "Robust partial failure handling using polymorphic JSON decoding and independent timeouts.",
-    "In-memory caching layer with sync.RWMutex, gracefully falling back to cached data when live fetches fail."
-  ],
-    metrics: [
-      { label: "Cities Covered", value: "85+ Stations" },
-      { label: "Concurrency Model", value: "Goroutines + Channels" }
-    ],
-    // DIBUAT STRUKTUR OBJEK YANG SAMA
-    techStack: ["Go", "Next.js", "TypeScript", "Tailwind CSS", "Leaflet", "Vercel"].map(tech),
-    githubUrl: "https://github.com/aidahdzfs/air-quality-project",
-    liveUrl: "https://air-quality-project.vercel.app"
-  },
 
   {
-    id: 4,
+    id: 3,
     title: "Truck Finance Tracker - Fleet Expense & Revenue Dashboard",
     category: "Fullstack Web App",
     description: "A financial tracking system for trucking company operations that goes beyond basic expense logging — it aggregates income and expenses per vehicle into automated monthly profit/loss reports, with a schema architected from day one to scale into a multi-tenant system.",
@@ -158,6 +138,27 @@ export const projects = [
       "Tailwind CSS", "MySQL", "Chart.js"
     ].map(tech),
     githubUrl: "https://github.com/aidahdzfs/truck-finance-tracker"
+  },
+
+  {
+    id: 4,
+    title: "AQI Dashboard - Real-Time Air Quality Monitor",
+    category: "Fullstack Web App",
+    description: "A real-time air quality dashboard for Indonesian cities, built to demonstrate concurrent programming in Go using goroutines, channels, and sync.WaitGroup to fetch data from multiple locations in parallel via the WAQI API.",
+    features: [
+    "Interactive Leaflet map with AQI color-coded markers and full pollutant breakdown.",
+    "Concurrent data pipeline fetching multiple stations using Go goroutines and buffered channels.",
+    "Robust partial failure handling using polymorphic JSON decoding and independent timeouts.",
+    "In-memory caching layer with sync.RWMutex, gracefully falling back to cached data when live fetches fail."
+  ],
+    metrics: [
+      { label: "Cities Covered", value: "85+ Stations" },
+      { label: "Concurrency Model", value: "Goroutines + Channels" }
+    ],
+    // DIBUAT STRUKTUR OBJEK YANG SAMA
+    techStack: ["Go", "Next.js", "TypeScript", "Tailwind CSS", "Leaflet", "Vercel"].map(tech),
+    githubUrl: "https://github.com/aidahdzfs/air-quality-project",
+    liveUrl: "https://air-quality-project.vercel.app"
   },
 ];
 
